@@ -8,6 +8,13 @@
     align-items: center;
     background: rgb(25, 24, 24);
 }
+.wrapper_white{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(201, 201, 201);
+}
 
 .button{
     @extend %default-for-buttons;

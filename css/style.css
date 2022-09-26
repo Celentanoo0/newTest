@@ -123,6 +123,14 @@ h1, h2, h3, h4, h5, h6 {
   background: rgb(25, 24, 24);
 }
 
+.wrapper_white {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(201, 201, 201);
+}
+
 .button {
   background: linear-gradient(to left, #ff00d0, #3e4eff);
 }
