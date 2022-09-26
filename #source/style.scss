@@ -1,1 +1,48 @@
 @import "nullstyle.scss";
+@import "templates.scss";
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(25, 24, 24);
+}
+
+.button{
+    @extend %default-for-buttons;
+    background: linear-gradient(to left, #ff00d0, #3e4eff);
+}
+.button:hover{
+    opacity: 0%;
+}
+.button::before{
+    @extend %button-shadow-before;
+}
+.button::after{
+    @extend %button-shadow-after;
+}
+
+.under-button{
+    @extend %default-for-buttons;
+    background: linear-gradient(to left, #9a2484, #2c36a3);
+    z-index: 0;
+    position: absolute;
+    top: 46.6%;
+    left: 39.5%;
+}
+.under-button::before{
+    @extend %button-shadow-before;
+}
+.under-button::after{
+    @extend %button-shadow-after;
+}
+
+@keyframes blooming{
+    0%{
+        opacity: 99%;
+    }
+    100%{
+        opacity: 60%;
+    }
+}

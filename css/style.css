@@ -68,3 +68,91 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+.under-button, .button {
+  position: relative;
+  color: white;
+  padding: 15px 50px;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  z-index: 100;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.under-button::before, .button::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, #ff00d0 0%, #0015f8 100%);
+  transform: translate3d(0px, 0px, 0) scale(1.15);
+  filter: blur(25px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: 10px;
+  -webkit-animation: blooming 1.7s linear infinite alternate;
+          animation: blooming 1.7s linear infinite alternate;
+  cursor: default;
+}
+
+.under-button::after, .button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: 10px;
+  -webkit-animation: blooming 1.7s linear infinite alternate;
+          animation: blooming 1.7s linear infinite alternate;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(25, 24, 24);
+}
+
+.button {
+  background: linear-gradient(to left, #ff00d0, #3e4eff);
+}
+
+.button:hover {
+  opacity: 0%;
+}
+
+.under-button {
+  background: linear-gradient(to left, #9a2484, #2c36a3);
+  z-index: 0;
+  position: absolute;
+  top: 46.6%;
+  left: 39.5%;
+}
+
+@-webkit-keyframes blooming {
+  0% {
+    opacity: 99%;
+  }
+  100% {
+    opacity: 60%;
+  }
+}
+
+@keyframes blooming {
+  0% {
+    opacity: 99%;
+  }
+  100% {
+    opacity: 60%;
+  }
+}
