@@ -8,12 +8,21 @@
     align-items: center;
     background: rgb(25, 24, 24);
 }
-.wrapper_white{
+.wrapper_opacity{
     min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(201, 201, 201);
+    background: rgb(25, 24, 24);
+    animation: whiteBg 1s linear forwards;
+}
+.wrapper_back{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(196, 189, 189);
+    animation: blackBg 1s linear forwards;
 }
 
 .button{
@@ -51,5 +60,21 @@
     }
     100%{
         opacity: 60%;
+    }
+}
+@keyframes whiteBg{
+    0%{
+        background: rgb(25, 24, 24);
+    }
+    100%{
+        background: rgb(196, 189, 189);
+    }
+}
+@keyframes blackBg{
+    0%{
+        background: rgb(196, 189, 189);
+    }
+    100%{
+        background: rgb(25, 24, 24);
     }
 }
