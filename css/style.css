@@ -115,29 +115,24 @@ h1, h2, h3, h4, h5, h6 {
           animation: blooming 1.7s linear infinite alternate;
 }
 
-.wrapper {
+.wrapper_white-to-black, .wrapper_black-to-white, .wrapper {
   min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper {
   background: rgb(25, 24, 24);
 }
 
-.wrapper_opacity {
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wrapper_black-to-white {
   background: rgb(25, 24, 24);
   -webkit-animation: whiteBg 1s linear forwards;
           animation: whiteBg 1s linear forwards;
 }
 
-.wrapper_back {
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wrapper_white-to-black {
   background: rgb(196, 189, 189);
   -webkit-animation: blackBg 1s linear forwards;
           animation: blackBg 1s linear forwards;
@@ -152,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .under-button {
-  background: linear-gradient(to left, #9a2484, #2c36a3);
+  background: linear-gradient(to left, #c72fab, #313ec8);
   z-index: 0;
   position: absolute;
   top: 46.6%;

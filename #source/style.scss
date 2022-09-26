@@ -2,25 +2,16 @@
 @import "templates.scss";
 
 .wrapper{
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %wrapper-default;
     background: rgb(25, 24, 24);
 }
-.wrapper_opacity{
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wrapper_black-to-white{
+    @extend %wrapper-default;
     background: rgb(25, 24, 24);
     animation: whiteBg 1s linear forwards;
 }
-.wrapper_back{
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wrapper_white-to-black{
+    @extend %wrapper-default;
     background: rgb(196, 189, 189);
     animation: blackBg 1s linear forwards;
 }
@@ -41,7 +32,7 @@
 
 .under-button{
     @extend %default-for-buttons;
-    background: linear-gradient(to left, #9a2484, #2c36a3);
+    background: linear-gradient(to left, #c72fab, #313ec8);
     z-index: 0;
     position: absolute;
     top: 46.6%;

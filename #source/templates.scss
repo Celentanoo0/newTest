@@ -41,3 +41,10 @@
     border-radius: 10px;
     animation: blooming 1.7s linear infinite alternate;
 }
+
+%wrapper-default{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
